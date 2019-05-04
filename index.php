@@ -17,11 +17,13 @@ $chat_id        = $output->result[0]->message->chat->id;
 
 
 //Отправляем сообщение
+$er = '';
 foreach ($chat_array as $chat) {
     $message = 'Новая заявка на сайте';
     file_get_contents($api . '/sendMessage?chat_id=' . $chat . '&text=' . urlencode($message));
+    $er .= 'Сообщение отправлено<br>';
 }
-
+echo $er;
 
 
 
