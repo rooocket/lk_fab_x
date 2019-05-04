@@ -18,24 +18,19 @@ $output         = json_decode(file_get_contents($api . '/getUpdates'));
 $chat_id        = $output->result[0]->message->chat->id;
 //echo $chat_id;
 
-
-
 //Отправляем сообщение
-$er = '';
 foreach ($chat_array as $chat) {
     $message = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
     file_get_contents($api . '/sendMessage?chat_id=' . $chat . '&text=' . urlencode($message));
-    $er .= 'Сообщение отправлено<br>';
 }
-echo $er;
 
-
-
-
-
-
-function vd($requerst) {
-    echo '<pre>';
-    var_dump($requerst);
-    echo '</pre>';
-}
+//
+//
+//
+//
+//
+//function vd($requerst) {
+//    echo '<pre>';
+//    var_dump($requerst);
+//    echo '</pre>';
+//}
