@@ -1,5 +1,9 @@
 <?php
 
+$chat_array = array(
+    293854654
+);
+
 $name_bot       = 'LkFabXBot';
 $site           = 'https://lkfabxbot.herokuapp.com';
 $access_token   = '742869666:AAGDllupJpDtVGQ6scurdONkGhk2pJ8SIjM';
