@@ -7,10 +7,6 @@ $chat_array = array(
 $bot_id          = $_REQUEST['bot_id'];
 $bot_token       = $_REQUEST['bot_token'];
 $bot_text        = $_REQUEST['bot_text'];
-
-$name_bot       = 'LkFabXBot';
-$site           = 'https://lkfabxbot.herokuapp.com';
-$access_token   = '742869666:AAGDllupJpDtVGQ6scurdONkGhk2pJ8SIjM';
 $api            = 'https://api.telegram.org/bot' . $bot_id . ':' . $bot_token;
 
 
