@@ -18,8 +18,8 @@ $api            = 'https://api.telegram.org/bot' . $bot_id . ':' . $bot_token;
 
 $output         = json_decode(file_get_contents($api . '/getUpdates'));
 $chat_id        = $output->result[0]->message->chat->id;
-vd($output);
-echo 'Chat_id: ' . $chat_id;
+//vd($output);
+//echo 'Chat_id: ' . $chat_id;
 
 //Отправляем сообщение
 foreach ($chat_array as $chat) {
@@ -31,9 +31,9 @@ foreach ($chat_array as $chat) {
 
 
 
-
-function vd($requerst) {
-    echo '<pre>';
-    var_dump($requerst);
-    echo '</pre>';
-}
+//
+//function vd($requerst) {
+//    echo '<pre>';
+//    var_dump($requerst);
+//    echo '</pre>';
+//}
