@@ -2,7 +2,8 @@
 
 $chat_array = array(
     293854654,
-    838683004
+    838683004,
+    293854654
 );
 
 $bot_id          = $_REQUEST['bot_id'];
