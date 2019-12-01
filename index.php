@@ -1,15 +1,10 @@
 <?php
 
-$chat_array = array(
-    293854654,
-    838683004,
-    293854654,
-    171132542
-);
 
 $bot_id          = $_REQUEST['bot_id'];
 $bot_token       = $_REQUEST['bot_token'];
 $bot_text        = $_REQUEST['bot_text'];
+$chat_id         = $_REQUEST['chat_id'];
 
 $name_bot       = 'LkFabXBot';
 //$site           = 'https://lkfabxbot.herokuapp.com';
@@ -23,12 +18,8 @@ $chat_id        = $output->result[0]->message->chat->id;
 //vd($output);
 //echo 'Chat_id: ' . $chat_id;
 
-//Отправляем сообщение
-foreach ($chat_array as $chat) {
-    $message = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
-    file_get_contents($api . '/sendMessage?chat_id=' . $chat . '&text=' . urlencode($message));
-}
-
+$message = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
+file_get_contents($api . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message));
 
 
 
