@@ -20,12 +20,3 @@ $chat_id        = $output->result[0]->message->chat->id;
 
 $message = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
 file_get_contents($api . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message));
-
-
-
-//
-//function vd($requerst) {
-//    echo '<pre>';
-//    var_dump($requerst);
-//    echo '</pre>';
-//}
