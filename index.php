@@ -31,7 +31,6 @@ foreach ($chat_array as $chat) {
 
 
 
-
 //
 //function vd($requerst) {
 //    echo '<pre>';
