@@ -20,6 +20,8 @@ if(!empty($getUpdates)) {
 } else {
     $message        = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
     $send = file_get_contents($api . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message));
+    $send = json_decode($send);
+    var_dump($send);
     if($send) {
         echo '1';
     } else {
