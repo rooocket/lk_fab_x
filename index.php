@@ -12,9 +12,9 @@ if(!empty($getUpdates)) {
     $chat_id         = $output->result[0]->message->chat->id;
 
     if($chat_id) {
-        echo '{"response": "' . $chat_id . '"}';
+        echo $chat_id;
     } else {
-        echo '{"response": "error_chat_id"}';
+        echo 'error_chat_id';
     }
 
 } else {
