@@ -22,8 +22,6 @@ if(!empty($getUpdates)) {
     $send = file_get_contents($api . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message));
     $send = json_decode($send);
 
-    var_dump($send);
-
     if($send->ok) {
         echo '1';
     } else {
