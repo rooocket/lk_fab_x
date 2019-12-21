@@ -10,7 +10,13 @@ $api                = 'https://api.telegram.org/bot' . $bot_id . ':' . $bot_toke
 if(!empty($getUpdates)) {
     $output          = json_decode(file_get_contents($api . '/getUpdates'));
     $chat_id         = $output->result[0]->message->chat->id;
-    echo $chat_id;
+
+    if($chat_id) {
+        echo $chat_id;
+    } else {
+        echo 'error_chat_id';
+    }
+
 } else {
     $message        = empty($bot_text) ? 'Новая заявка на сайте' : $bot_text;
     file_get_contents($api . '/sendMessage?chat_id=' . $chat_id . '&text=' . urlencode($message));
